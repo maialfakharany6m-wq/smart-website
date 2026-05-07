@@ -39,9 +39,7 @@ export default function Executive() {
         </div>
 
       </section>
-
-      <Footer />
-
+  
     </div>
   );
 }
