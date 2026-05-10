@@ -15,6 +15,7 @@ export default function Footer() {
           <div className="flex items-center gap-4 mb-6">
             <img
               src="/logo_footer.png"
+              alt="Smart Smile Way Logo"
               className="w-24 h-24 md:w-28 md:h-28 rounded-full object-cover shadow-lg hover:scale-105 transition duration-300"
             />
 
@@ -49,7 +50,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* CONNECT + SVG ICONS */}
+        {/* CONNECT */}
         <div>
           <h3 className="mb-6 tracking-[0.2em] text-sm text-white">
             CONNECT
@@ -59,7 +60,7 @@ export default function Footer() {
             Follow us on our official platforms
           </p>
 
-          <div className="flex gap-5">
+          <div className="flex gap-5 flex-wrap">
 
             {/* LinkedIn */}
             <a
@@ -67,9 +68,10 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="group"
+              aria-label="LinkedIn"
             >
               <svg
-                className="w-6 h-6 text-white/70 group-hover:text-blue-400 group-hover:scale-110 transition"
+                className="w-6 h-6 text-white/70 group-hover:text-blue-400 group-hover:scale-110 transition duration-300"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -79,13 +81,14 @@ export default function Footer() {
 
             {/* Instagram */}
             <a
-              href="https://www.instagram.com/smartsmile.way/"
+              href="https://www.instagram.com/smartsmileway"
               target="_blank"
               rel="noopener noreferrer"
               className="group"
+              aria-label="Instagram"
             >
               <svg
-                className="w-6 h-6 text-white/70 group-hover:text-pink-400 group-hover:scale-110 transition"
+                className="w-6 h-6 text-white/70 group-hover:text-pink-400 group-hover:scale-110 transition duration-300"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -95,13 +98,14 @@ export default function Footer() {
 
             {/* Facebook */}
             <a
-              href="https://www.facebook.com/profile.php?id=61560986729345"
+              href="https://www.facebook.com/profile.php?id=61588994533873"
               target="_blank"
               rel="noopener noreferrer"
               className="group"
+              aria-label="Facebook"
             >
               <svg
-                className="w-6 h-6 text-white/70 group-hover:text-blue-500 group-hover:scale-110 transition"
+                className="w-6 h-6 text-white/70 group-hover:text-blue-500 group-hover:scale-110 transition duration-300"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -115,9 +119,10 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="group"
+              aria-label="YouTube"
             >
               <svg
-                className="w-6 h-6 text-white/70 group-hover:text-red-500 group-hover:scale-110 transition"
+                className="w-6 h-6 text-white/70 group-hover:text-red-500 group-hover:scale-110 transition duration-300"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -131,9 +136,10 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="group"
+              aria-label="TikTok"
             >
               <svg
-                className="w-6 h-6 text-white/70 group-hover:text-cyan-400 group-hover:scale-110 transition"
+                className="w-6 h-6 text-white/70 group-hover:text-cyan-400 group-hover:scale-110 transition duration-300"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -147,9 +153,10 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="group"
+              aria-label="WhatsApp"
             >
               <svg
-                className="w-6 h-6 text-white/70 group-hover:text-green-400 group-hover:scale-110 transition"
+                className="w-6 h-6 text-white/70 group-hover:text-green-400 group-hover:scale-110 transition duration-300"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
