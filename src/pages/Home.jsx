@@ -96,7 +96,7 @@ function Hero() {
 function ExecutiveSlider() {
   const leaders = [
     { name: "Eng. Sameer Abdullah", role: "Founder- CEO Smart Smile Way Education Consultant for British and  American Education system", img: "/exec1.jpeg" },
-    { name: "Mr. Ibrahim Elbiblany", role: "Co-Founder Smart Smile Way ", img: "/exec2.jpg" },
+    { name: "Mr. Ibrahim Eldibany", role: "Co-Founder Smart Smile Way ", img: "/exec2.jpg" },
     { name: "Dr. Heba Sultan", role: "General Manager", img: "/exec3.png" },
     { name: "Eng. Mai Ashraf", role: "Tech Director", img: "/exec4.jpg" },
     { name: "Dr. Norhan Khaled", role: "American Education Manager", img: "/exec5.png" },
