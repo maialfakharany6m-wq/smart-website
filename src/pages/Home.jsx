@@ -60,7 +60,7 @@ function Hero() {
           className="flex justify-center"
         >
           <img
-            src="/logo.png"
+            src="/logos/logo.png"
             className="w-[420px] md:w-[500px] drop-shadow-2xl"
           />
         </motion.div>

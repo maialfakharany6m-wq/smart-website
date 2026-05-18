@@ -14,7 +14,7 @@ export default function Footer() {
         <div>
           <div className="flex items-center gap-4 mb-6">
             <img
-              src="/logo_footer.png"
+              src="/logos/logo_footer.png"
               alt="Smart Smile Way Logo"
               className="w-24 h-24 md:w-28 md:h-28 rounded-full object-cover shadow-lg hover:scale-105 transition duration-300"
             />
