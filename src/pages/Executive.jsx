@@ -55,14 +55,14 @@ export default function App() {
 
   const rdTeam = [
     {
-      name: "Eng.Habiba ElGohary",
+      name: "Eng. Habiba ElGohary",
       role: "R&D Specialist",
       img: "/team/Habiba-ElGohary.jpg",
       desc:
         "She leads the AI team within the Research & Development department, working alongside experienced engineers specialized in the field. With a background in teaching Computer Science at the university level, she is also pursuing a master’s degree in Artificial Intelligence with a focus on medical applications and healthcare technologies."
     },
     {
-      name: "Eng.Abdelrahman Hesham",
+      name: "Eng. Abdelrahman Hesham",
       role: "R&D Specialist",
       img: "/team/abdelrahman-hesham.jpg",
       desc:
