@@ -1,4 +1,4 @@
-import Cursor from "../components/Cursor";
+import { memo } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -101,7 +101,7 @@ export default function App() {
   );
 
   // PORTRAIT
-  const Portrait = ({ src, featured = false }) => (
+  const Portrait = memo(({ src, featured = false }) => (
     <div className="relative flex justify-center">
 
       <div
@@ -133,6 +133,11 @@ export default function App() {
           <img
             src={src}
             alt=""
+            loading="lazy"
+            decoding="async"
+            fetchPriority="low"
+            width="500"
+            height="500"
             draggable={false}
             className="
               w-full
@@ -150,10 +155,10 @@ export default function App() {
       </div>
 
     </div>
-  );
+  ));
 
   // CARD
-  const TeamCard = ({ member, featured = false }) => (
+  const TeamCard = memo(({ member, featured = false }) => (
     <div
       className={`
         group
@@ -278,12 +283,14 @@ export default function App() {
       </div>
 
     </div>
-  );
+  ));
 
   return (
     <div className="min-h-screen bg-[#f8f8f7] text-black overflow-hidden">
 
-      <Cursor />
+      {/* REMOVED CURSOR FOR PERFORMANCE */}
+      {/* <Cursor /> */}
+
       <Navbar />
 
       {/* BACKGROUND */}
@@ -392,20 +399,6 @@ export default function App() {
             </h1>
 
           </div>
-
-          {/* description */}
-          <p className="
-            mt-10
-            max-w-3xl
-            mx-auto
-            text-[16px]
-            md:text-[18px]
-            leading-[2]
-            text-black/50
-            font-normal
-          ">
-           
-          </p>
 
         </div>
 
@@ -545,7 +538,6 @@ export default function App() {
 
       </section>
 
-     
-    </div>
+         </div>
   );
 }
