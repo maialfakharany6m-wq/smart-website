@@ -1,17 +1,14 @@
 import { useRef } from "react";
-import Cursor from "../components/Cursor";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
 export default function Achievements() {
-
   const accreditationsRef = useRef(null);
 
   const scroll = (dir) => {
     const el = accreditationsRef.current;
     if (!el) return;
 
-    const amount = el.offsetWidth * 0.85;
+    const amount = el.offsetWidth * 0.82;
 
     el.scrollBy({
       left: dir === "next" ? amount : -amount,
@@ -22,146 +19,147 @@ export default function Achievements() {
   const accreditations = [
     "/accreditations/pearson.jpg",
     "/accreditations/british-council.jpg",
-        "/accreditations/cognia.png",
-        "/accreditations/cambridge.png",
+    "/accreditations/cognia.png",
+    "/accreditations/cambridge.png",
     "/accreditations/stem.png",
   ];
 
-  return (
-    <div className="bg-[#F9FAFB] min-h-screen">
+  const schools = [
+    {
+      name: "Oakland College School",
+      img: "/schools/oakland.jpg",
+      desc: "A modern educational institution focused on academic excellence, innovation, and international standards.",
+    },
+    {
+      name: "West Cliff School",
+      img: "/schools/west_cliff.jfif",
+      desc: "Delivering structured international education systems with a strong academic foundation.",
+    },
+  ];
 
-      <Cursor />
+  return (
+    <div className="min-h-screen bg-[#f8f8f7] text-black overflow-hidden">
       <Navbar />
 
-      <section className="pt-36 pb-24 px-6 md:px-24 max-w-7xl mx-auto">
+      {/* background */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-[-250px] right-[-150px] w-[600px] h-[600px] rounded-full bg-[#7c6cf6]/8 blur-[150px]" />
+        <div className="absolute bottom-[-250px] left-[-150px] w-[500px] h-[500px] rounded-full bg-slate-300/20 blur-[150px]" />
+      </div>
 
-        {/* ================= TITLE ================= */}
-        <div className="mb-20">
-          <h1 className="text-5xl md:text-6xl text-[#0B1B3A] font-[Playfair_Display]">
-            Achievements
+      <section className="relative z-10 pt-32 pb-28 px-6 md:px-16 lg:px-24 max-w-7xl mx-auto">
+
+        {/* hero */}
+        <div className="max-w-4xl mb-28">
+          <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-black/[0.05] bg-white/60 backdrop-blur-xl">
+            <div className="w-1.5 h-1.5 rounded-full bg-[#7c6cf6]" />
+            <span className="text-[10px] uppercase tracking-[0.35em] text-black/45 font-medium">
+              Excellence
+            </span>
+          </div>
+
+          <h1 className="mt-8 text-[42px] md:text-[72px] font-light tracking-[-0.05em] leading-[0.95] text-black/85">
+            Global Recognition
+            <span className="block bg-gradient-to-r from-black/85 via-black/60 to-[#7c6cf6] bg-clip-text text-transparent">
+              & Partnerships
+            </span>
           </h1>
-          <p className="text-gray-500 max-w-xl mt-4">
-            Our partnerships and institutions reflect global educational excellence.
+
+          <p className="mt-8 max-w-3xl text-[15px] md:text-[17px] leading-[1.95] tracking-[0.01em] text-black/65 font-light">
+            Our partnerships, accreditations, and institutions reflect our
+            commitment to delivering globally aligned educational excellence.
           </p>
         </div>
 
-        {/* ================= ACCREDITATIONS ================= */}
-        <div className="mb-28">
-
-          {/* HEADER */}
+        {/* accreditations */}
+        <div className="mb-32">
           <div className="flex items-center justify-between mb-10">
-
-            <h2 className="text-sm tracking-[0.35em] text-blue-400">
-              ACCREDITATIONS
+            <h2 className="text-[10px] uppercase tracking-[0.35em] text-black/45 font-medium">
+              Accreditations
             </h2>
 
             <div className="flex gap-3">
               <button
                 onClick={() => scroll("prev")}
-                className="w-10 h-10 bg-white border rounded-full shadow-sm"
+                className="w-11 h-11 rounded-full border border-black/[0.05] bg-white/70 backdrop-blur-xl hover:shadow-md transition"
               >
                 ←
               </button>
 
               <button
                 onClick={() => scroll("next")}
-                className="w-10 h-10 bg-white border rounded-full shadow-sm"
+                className="w-11 h-11 rounded-full border border-black/[0.05] bg-white/70 backdrop-blur-xl hover:shadow-md transition"
               >
                 →
               </button>
             </div>
-
           </div>
 
-          {/* SLIDER */}
           <div
             ref={accreditationsRef}
-            className="flex gap-10 overflow-x-auto scroll-smooth pb-2"
+            className="flex gap-8 overflow-x-auto scroll-smooth pb-3 no-scrollbar"
           >
-
             {accreditations.map((img, i) => (
               <div
                 key={i}
-                className="min-w-[420px] md:min-w-[500px]
-                           h-[340px]
-                           bg-white border rounded-3xl shadow-sm
-                           flex items-center justify-center
-                           transition duration-500 ease-out
-                           hover:shadow-xl hover:scale-[1.02]"
+                className="min-w-[320px] md:min-w-[430px] h-[280px] md:h-[320px]
+                rounded-[36px] border border-black/[0.04] bg-white/55
+                backdrop-blur-2xl flex items-center justify-center
+                transition-all duration-700 hover:-translate-y-1
+                hover:shadow-[0_30px_80px_rgba(0,0,0,0.04)]"
               >
-
                 <img
                   src={img}
-                  className="h-[200px] md:h-[260px] object-contain
-                             transition duration-500 ease-out
-                             hover:scale-110"
+                  alt=""
+                  className="h-[140px] md:h-[190px] object-contain transition duration-700 hover:scale-105"
                 />
-
               </div>
             ))}
-
           </div>
-
         </div>
 
-        {/* ================= SCHOOLS ================= */}
+        {/* schools */}
         <div>
-
-          <h2 className="text-sm tracking-[0.35em] text-blue-400 mb-12">
-            SCHOOLS
+          <h2 className="text-[10px] uppercase tracking-[0.35em] text-black/45 font-medium mb-12">
+            Institutions
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-14">
+          <div className="grid lg:grid-cols-2 gap-10">
+            {schools.map((school, i) => (
+              <div
+                key={i}
+                className="group relative overflow-hidden rounded-[38px]
+                border border-black/[0.04] bg-white/55 backdrop-blur-2xl
+                p-10 md:p-14 transition-all duration-700 hover:-translate-y-1
+                hover:shadow-[0_30px_80px_rgba(0,0,0,0.05)]"
+              >
+                <div className="absolute top-[-120px] right-[-120px] w-[260px] h-[260px] rounded-full bg-[#7c6cf6]/6 blur-[90px]" />
 
-            {/* SCHOOL 1 */}
-            <div className="p-14 bg-white border rounded-3xl shadow-sm
-                            transition duration-500 hover:shadow-xl hover:scale-[1.01]">
+                <div className="relative z-10">
+                  <div className="h-[220px] flex items-center justify-center mb-10">
+                    <img
+                      src={school.img}
+                      alt=""
+                      className="max-h-[220px] object-contain transition duration-700 group-hover:scale-105"
+                    />
+                  </div>
 
-              <div className="h-[260px] flex items-center justify-center mb-8">
-                <img 
-                  src="/schools/oakland.jpg"
-                  className="h-[330px] object-contain transition duration-500 hover:scale-110"
-                />
+                  <h3 className="text-[28px] md:text-[36px] font-light tracking-[-0.04em] text-black/85 leading-[1.05]">
+                    {school.name}
+                  </h3>
+
+                  <div className="w-14 h-px bg-black/10 mt-6 mb-6" />
+
+                  <p className="text-[15px] md:text-[17px] leading-[1.95] tracking-[0.01em] text-black/65 font-light">
+                    {school.desc}
+                  </p>
+                </div>
               </div>
-
-              <h3 className="text-2xl text-[#0B1B3A] font-semibold mb-2">
-                Oakland College School
-              </h3>
-
-              <p className="text-gray-500">
-                A modern educational institution focused on academic excellence and international standards.
-              </p>
-
-            </div>
-
-            {/* SCHOOL 2 */}
-            <div className="p-14 bg-white border rounded-3xl shadow-sm
-                            transition duration-500 hover:shadow-xl hover:scale-[1.01]">
-
-              <div className="h-[260px] flex items-center justify-center mb-8">
-                <img
-                  src="/schools/west_cliff.jfif" 
-                  className="h-[200px] object-contain transition duration-500 hover:scale-110"
-                />
-              </div>
-
-              <h3 className="text-2xl text-[#0B1B3A] font-semibold mb-2">
-                West Cliff School
-              </h3>
-
-              <p className="text-gray-500">
-                Delivering structured international education systems.
-              </p>
-
-            </div>
-
+            ))}
           </div>
-
         </div>
 
       </section>
-
-     
     </div>
   );
 }
