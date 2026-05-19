@@ -7,7 +7,7 @@ export default function Navbar() {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Achievements", path: "/achievements" },
-    { name: "Executive", path: "/executive" },
+    { name: "Meet Our Team", path: "/executive" },
     { name: "Contact", path: "/contact" },
   ];
 
