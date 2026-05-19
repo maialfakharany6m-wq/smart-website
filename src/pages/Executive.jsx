@@ -7,7 +7,7 @@ export default function App() {
   const ceo = {
     name: "Eng. Sameer Abdullah",
     role: "Founder & CEO",
-    img: "/exec/exec1.jpg",
+    img: "/exec/Sameer-Abdullah.jpeg",
     desc:
       "CEO of Smart Smile Way and Education Consultant specialized in both the British and American education systems, focused on innovation, academic excellence, and future-ready learning."
   };
