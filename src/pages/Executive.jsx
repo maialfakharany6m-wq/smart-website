@@ -21,7 +21,7 @@ export default function App() {
   };
 
   const executiveManager = {
-    name: "Mr. Ibrahim Elbiblany",
+    name: "Mr. Ibrahim Eldibany",
     role: "Executive Manager",
     img: "/exec/2.jpg",
     desc:
