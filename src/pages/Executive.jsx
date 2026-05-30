@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 export default function App() {
 
   const ceo = {
-    name: "Eng. Sameer Abdullah",
+    name: "Dr. Sameer Abdullah",
     role: "Founder & CEO",
     img: "/exec/Sameer-Abdullah.jpeg",
     desc:
@@ -13,7 +13,7 @@ export default function App() {
   };
 
   const generalManager = {
-    name: "Dr. Heba Sultan",
+    name: "Eng. Heba Sultan",
     role: "General Manager",
     img: "/exec/exec3.jpg",
     desc:
